@@ -30,22 +30,41 @@ variable "public_subnet_cidr" {
 }
 
 variable "public_subnet_tags" {
+  type    = map(any)
   default = {}
 }
 //------------ private subnet variables -----------------------------------------
-variable "private_subnet_cidr" {  
+variable "private_subnet_cidr" {
   type = list(string)
 }
 
 variable "private_subnet_tags" {
+  type    = map(any)
   default = {}
 }
 
 //------------ database subnet variables -----------------------------------------
-variable "database_subnet_cidr" {  
+variable "database_subnet_cidr" {
   type = list(string)
 }
 
 variable "database_subnet_tags" {
+  type    = map(any)
   default = {}
+}
+//---------- NAT Gateway variables ----------------------------------------
+variable "nat_gateway_tags" {
+  type    = map(any)
+  default = {}
+}
+//----------VPC Peering variables ----------------------------------------
+
+variable "is_peering_required" {
+  type = bool
+  default = false  
+}
+
+variable "vpc_peering_tags" {
+    type = map   
+    default = {}  
 }
