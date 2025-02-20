@@ -9,3 +9,11 @@
 # output "eip_info" {
 #   value = module.vpc.eip_info
 # }
+
+# output "default_vpc_info" {
+#   value = module.vpc.default_vpc_info
+# }
+
+output "default_vpc_main_rt_id" {
+  value = module.vpc.default_vpc_main_rt_id
+}

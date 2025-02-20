@@ -60,11 +60,11 @@ variable "nat_gateway_tags" {
 //----------VPC Peering variables ----------------------------------------
 
 variable "is_peering_required" {
-  type = bool
-  default = false  
+  type    = bool
+  default = false
 }
 
 variable "vpc_peering_tags" {
-    type = map   
-    default = {}  
+  type    = map(any)
+  default = {}
 }
