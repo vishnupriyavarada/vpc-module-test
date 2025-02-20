@@ -17,3 +17,7 @@
 output "default_vpc_main_rt_id" {
   value = module.vpc.default_vpc_main_rt_id
 }
+
+output "vpc_id" {
+  value = module.vpc.vpc_id
+}
